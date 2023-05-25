@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "756b2859-bda3-44af-91c7-b4063f68682d",
+		"name": "IFTTT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticate as ifttt@bosch.com",
+			"id": "b8bd1969-ac72-4247-ad16-b338d8f8f3ce",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic aWZ0dHRAYm9zY2guY29tOnVDWUVxOUtpclFsbkFocVRuODZ2ZVpxNA=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"device\" : \"1234567890\",\n  \"os_type\":\"android\",\n  \"os_version\":\"4.4.2\",\n  \"dvc_manuf\":\"samsung\",\n  \"dvc_type\":\"handset\"\n}\n"
+				},
+				"url": "{{server}}/api/v1/authenticate2"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve User Info",
+			"id": "f711ffec-a56d-406d-ba22-f637f87a1205",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTAwNTI5NjcsInVzZXJfbmFtZSI6Ijc4ZmIxNDYwLWYxYzktMTFlNi04Nzc2LTAyNDJhYzExMDAwNSIsImF1dGhvcml0aWVzIjpbInJvbGU6L0RFRkFVTFQvSUFQL0luZGVnby9JbmRlZ29Vc2VyIl0sImp0aSI6IjIwMjkyOTJkLWY0NTItNDMzNC1hZGUxLWFjMzRiNzI0NjBjOSIsImNsaWVudF9pZCI6ImlmdHR0Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.baO-A-1Sn_Ao0ndf4Ifn_aLCBkwBbG9nul-Pb8GL_DE"
+					}
+				],
+				"url": "{{server}}/api/v1/ifttt/v1/user/info"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve User Info - EXPIRED",
+			"id": "7d5e1166-205e-46ac-9780-6c1621f0292c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDk0NTI4MzAsInVzZXJfbmFtZSI6Ijc4ZmIxNDYwLWYxYzktMTFlNi04Nzc2LTAyNDJhYzExMDAwNSIsImF1dGhvcml0aWVzIjpbInJvbGU6L0RFRkFVTFQvSUFQL0luZGVnby9JbmRlZ29Vc2VyIl0sImp0aSI6IjYyNzQwOGYyLTdlNTYtNDhmYS05MWM0LWI0OWRmZjNhYzk1ZSIsImNsaWVudF9pZCI6ImlmdHR0Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.KJ3-Dz8ThFT4XNo8sdYcQawTGbXk0L9_tTy5_CArxTk"
+					}
+				],
+				"url": "{{server}}/api/v1/ifttt/v1/user/info"
+			},
+			"response": []
+		},
+		{
+			"name": "Check system status",
+			"id": "2fb3c010-a118-42a5-ac71-2dd35f7f7428",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "IFTTT-Service-Key",
+						"value": "gP1fGXWPdAwaNbJkhfkvKV1Q2tSITtYeMTZe7wafRO-Rr4MQFjid3ldfEaMNDkVU"
+					}
+				],
+				"url": "{{server}}/api/v1/ifttt/v1/status"
+			},
+			"response": []
+		},
+		{
+			"name": "Get test setup",
+			"id": "ab09b87e-75a9-4dae-a7b0-4d00fd09cb5f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "IFTTT-Service-Key",
+						"value": "gP1fGXWPdAwaNbJkhfkvKV1Q2tSITtYeMTZe7wafRO-Rr4MQFjid3ldfEaMNDkVU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{server}}/api/v1/ifttt/v1/test/setup"
+			},
+			"response": []
+		},
+		{
+			"name": "Get test setup - invald key",
+			"id": "ba9f4ba0-fe70-4331-8876-4fe7399dff5e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "IFTTT-Service-Key",
+						"value": "gP1fGXWPdAwaNbJkhfkvKV1Q2tSITtYeMTZe7wafRO-Rr4MQFjid3ldfEaMNDkVU_invalid"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{server}}/api/v1/ifttt/v1/test/setup"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Action MOW",
+			"id": "863f9ec2-d47b-4404-bced-f45c5ea5a0a2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTAwNTQ0NDgsInVzZXJfbmFtZSI6IjcxYjE5NzEwLTI5ZWUtMTFlOS05MjY0LTAyNDJhYzExMDAwNSIsImF1dGhvcml0aWVzIjpbInJvbGU6L0RFRkFVTFQvSUFQL0luZGVnby9JbmRlZ29Vc2VyIl0sImp0aSI6IjE1Yzg5MzRkLTc4NzYtNDMyYi04NjVkLTgyZjhkM2JhZjNmZCIsImNsaWVudF9pZCI6ImlmdHR0Iiwic2NvcGUiOltdfQ.akg-_TyIZRjA9waSCe9I3OVNh2lu99vVw4qejiEvBvk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{server}}/api/v1/ifttt/v1/actions/send_mow"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Action PAUSE",
+			"id": "a06c49c6-be74-4341-af3b-08329854b016",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTAwNTI5NjcsInVzZXJfbmFtZSI6Ijc4ZmIxNDYwLWYxYzktMTFlNi04Nzc2LTAyNDJhYzExMDAwNSIsImF1dGhvcml0aWVzIjpbInJvbGU6L0RFRkFVTFQvSUFQL0luZGVnby9JbmRlZ29Vc2VyIl0sImp0aSI6IjIwMjkyOTJkLWY0NTItNDMzNC1hZGUxLWFjMzRiNzI0NjBjOSIsImNsaWVudF9pZCI6ImlmdHR0Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.baO-A-1Sn_Ao0ndf4Ifn_aLCBkwBbG9nul-Pb8GL_DE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{server}}/api/v1/ifttt/v1/actions/pause"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Action DOCK",
+			"id": "0165e3ae-886f-4065-9ef9-be3e735940f9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTAwNTI5NjcsInVzZXJfbmFtZSI6Ijc4ZmIxNDYwLWYxYzktMTFlNi04Nzc2LTAyNDJhYzExMDAwNSIsImF1dGhvcml0aWVzIjpbInJvbGU6L0RFRkFVTFQvSUFQL0luZGVnby9JbmRlZ29Vc2VyIl0sImp0aSI6IjIwMjkyOTJkLWY0NTItNDMzNC1hZGUxLWFjMzRiNzI0NjBjOSIsImNsaWVudF9pZCI6ImlmdHR0Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.baO-A-1Sn_Ao0ndf4Ifn_aLCBkwBbG9nul-Pb8GL_DE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{server}}/api/v1/ifttt/v1/actions/send_dock"
+			},
+			"response": []
+		},
+		{
+			"name": "Get access token with authorization code",
+			"id": "2cd07b04-6315-4171-a18d-25beaa7e4bc3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic aWZ0dHQ6Z1pmVE5lcVlhY1BzcmVlTHowZlg3dzNS"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/oauth/token?grant_type=authorization_code&code=gQR5oP&redirect_uri=https://ifttt.com/channels/indego/authorize",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "code",
+							"value": "gQR5oP"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://ifttt.com/channels/indego/authorize"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get access token with body",
+			"id": "1e12fc80-7840-4325-919a-678405d6c1be",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": \"ifttt\",\r\n  \"client_secret\": \"gZfTNeqYacPsreeLz0fX7w3R\",\r\n  \"grant_type\": \"authorization_code\",\r\n  \"code\": \"4Sph0c\",\r\n  \"redirect_uri\": \"https://ifttt.com/channels/indegoconnect/authorize\"\r\n}"
+				},
+				"url": "{{server}}/oauth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get access token with xForm",
+			"id": "c99c701f-d25b-480a-b458-9c45f43d545c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "ifttt",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "gZfTNeqYacPsreeLz0fX7w3R",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "4Sph0c",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://ifttt.com/channels/indegoconnect/authorize",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{server}}/oauth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get access token with refresh token",
+			"id": "c3451ffd-888b-4a47-bf58-f4ebb7cc9399",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic aWZ0dHQ6Z1pmVE5lcVlhY1BzcmVlTHowZlg3dzNS"
+					}
+				],
+				"url": {
+					"raw": "{{server}}/oauth/token?grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiI3OGZiMTQ2MC1mMWM5LTExZTYtODc3Ni0wMjQyYWMxMTAwMDUiLCJhdXRob3JpdGllcyI6WyJyb2xlOi9ERUZBVUxUL0lBUC9JbmRlZ28vSW5kZWdvVXNlciJdLCJqdGkiOiI1MGQyNDczNy0wYTMyLTRmMWUtYTAwOC1iMTI1YzkxYWM3YWIiLCJjbGllbnRfaWQiOiJpZnR0dCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiIxY2VlNjk0Ny01MGY2LTQ5YzctYmNiZi02NTk5YzRiNjgxZjMifQ.ZaMFWEfQhso2ZsKnNA8NfbsMESG1sUly6nZeq9qy0tE",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiI3OGZiMTQ2MC1mMWM5LTExZTYtODc3Ni0wMjQyYWMxMTAwMDUiLCJhdXRob3JpdGllcyI6WyJyb2xlOi9ERUZBVUxUL0lBUC9JbmRlZ28vSW5kZWdvVXNlciJdLCJqdGkiOiI1MGQyNDczNy0wYTMyLTRmMWUtYTAwOC1iMTI1YzkxYWM3YWIiLCJjbGllbnRfaWQiOiJpZnR0dCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiIxY2VlNjk0Ny01MGY2LTQ5YzctYmNiZi02NTk5YzRiNjgxZjMifQ.ZaMFWEfQhso2ZsKnNA8NfbsMESG1sUly6nZeq9qy0tE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f7e3223e-7637-42f4-b003-97d84d8b9094",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8e5d3b2c-dfff-4df7-8515-d4f25837a370",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1e8bc2bd-8cb1-44ce-86aa-12099a739318",
+			"key": "server",
+			"value": "blabla",
+			"type": "string"
+		}
+	]
+}
