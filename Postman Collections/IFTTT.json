@@ -6,47 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Authorize",
-			"id": "b24ab12b-387f-40ec-946b-9ee229a4c370",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic XXX"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"url": {
-					"raw": "{{server}}/oauth/authorize?response_type=code&client_id=ifttt4redirect_uri=https://ifttt.com/channels/indegoconnect/authorize",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"oauth",
-						"authorize"
-					],
-					"query": [
-						{
-							"key": "response_type",
-							"value": "code"
-						},
-						{
-							"key": "client_id",
-							"value": "ifttt4redirect_uri=https://ifttt.com/channels/indegoconnect/authorize"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Authenticate as ifttt@bosch.com",
 			"id": "b8bd1969-ac72-4247-ad16-b338d8f8f3ce",
 			"protocolProfileBehavior": {
@@ -394,7 +353,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b5450a7e-3b75-456f-abbc-fe8ba086483f",
+				"id": "f7e3223e-7637-42f4-b003-97d84d8b9094",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -404,7 +363,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "14567fb7-35dd-41a9-b402-6ca0595a020d",
+				"id": "8e5d3b2c-dfff-4df7-8515-d4f25837a370",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -414,9 +373,9 @@
 	],
 	"variable": [
 		{
-			"id": "54e7f7bc-f0f5-4e3c-bd0f-fb7fe842b0b4",
+			"id": "f62f2988-5326-4c93-9e6b-1e0eab4f4b80",
 			"key": "server",
-			"value": "",
+			"value": "blabla",
 			"type": "string"
 		}
 	]
