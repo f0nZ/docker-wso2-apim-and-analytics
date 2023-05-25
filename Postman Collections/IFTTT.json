@@ -24,7 +24,7 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{server}}/oauth/authorize?response_type=code&client_id=ifttt3redirect_uri=https://ifttt.com/channels/indegoconnect/authorize",
+					"raw": "{{server}}/oauth/authorize?response_type=code&client_id=ifttt4redirect_uri=https://ifttt.com/channels/indegoconnect/authorize",
 					"host": [
 						"{{server}}"
 					],
@@ -39,7 +39,7 @@
 						},
 						{
 							"key": "client_id",
-							"value": "ifttt3redirect_uri=https://ifttt.com/channels/indegoconnect/authorize"
+							"value": "ifttt4redirect_uri=https://ifttt.com/channels/indegoconnect/authorize"
 						}
 					]
 				}
