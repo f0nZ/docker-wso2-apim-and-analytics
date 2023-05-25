@@ -394,7 +394,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f7e3223e-7637-42f4-b003-97d84d8b9094",
+				"id": "33777124-1781-44b4-99c3-953f78b24d2e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -404,7 +404,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8e5d3b2c-dfff-4df7-8515-d4f25837a370",
+				"id": "76dadaed-9205-4b73-9e8e-4e0fd44fdc53",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -414,7 +414,7 @@
 	],
 	"variable": [
 		{
-			"id": "36fc516b-dd31-46ac-8690-7596ea99b036",
+			"id": "24f5a1a3-e4f9-4d27-ad71-9e3124d35574",
 			"key": "server",
 			"value": "blabla",
 			"type": "string"
