@@ -389,5 +389,35 @@
 			},
 			"response": []
 		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ae3b5db6-51bf-43ef-9d1c-b6ece5fed5b5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "38233674-015a-4129-936b-d4891057148b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "45d6b548-e4bd-4fd2-8efa-561099157f1b",
+			"key": "server",
+			"value": "blablabla",
+			"type": "string"
+		}
 	]
 }
